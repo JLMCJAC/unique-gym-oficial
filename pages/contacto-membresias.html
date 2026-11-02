@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selecciona tu plan de membresía en Unique Gym y completa tu formulario de registro e inscripción en línea.">
+  <title>Membresías y Contacto - Unique Gym</title>
+</head>
+<body>
+
+  <header>
+    <h1>UNIQUE GYM</h1>
+    <p>Train Hard. Live Better.</p>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="clases-horarios.html">Clases y Horarios</a></li>
+        <li><a href="entrenadores-instalaciones.html">Entrenadores e Instalaciones</a></li>
+        <li><a href="contacto-membresias.html" aria-current="page">Contacto y Membresías</a></li>
+      </ul>
+    </nav>
+    <a href="#formulario">Únete Ahora</a>
+  </header>
+
+  <main>
+    <!-- TARJETAS DE PLANES -->
+    <section>
+      <h2>PLANES Y MEMBRESÍAS</h2>
+
+      <article>
+        <h3>Plan Básico</h3>
+        <p>Acceso general a zona de pesas y máquinas en horario regular.</p>
+        <p>Precio: <strong>RD$1,000 / mes</strong></p>
+      </article>
+
+      <article>
+        <h3>Plan Premium</h3>
+        <p>Acceso ilimitado al gimnasio y a todas las clases grupales orientadas.</p>
+        <p>Precio: <strong>RD$1,500 / mes</strong></p>
+      </article>
+
+      <article>
+        <h3>Plan Elite</h3>
+        <p>Acceso total 24/7, clases grupales y 2 evaluaciones físicas personalizadas al mes.</p>
+        <p>Precio: <strong>RD$2,000 / mes</strong></p>
+      </article>
+    </section>
+
+    <!-- TABLA COMPARATIVA DE PLANES -->
+    <section>
+      <h2>TABLA COMPARATIVA DE BENEFICIOS</h2>
+      <table>
+        <caption>Tabla 2: Comparativa de servicios incluidos por plan de membresía en Unique Gym</caption>
+        <thead>
+          <tr>
+            <th scope="col">Beneficios</th>
+            <th scope="col">Básico (RD$1,000)</th>
+            <th scope="col">Premium (RD$1,500)</th>
+            <th scope="col">Elite (RD$2,000)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Acceso a Gimnasio / Pesas</th>
+            <td>Incluido</td>
+            <td>Incluido</td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <th scope="row">Clases Grupales</th>
+            <td>No incluido</td>
+            <td>Incluido</td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <th scope="row">Entrenador Dirigido</th>
+            <td>No incluido</td>
+            <td>No incluido</td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <th scope="row">Evaluación Física Mensual</th>
+            <td>No incluido</td>
+            <td>Incluido</td>
+            <td>Incluido</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- INFORMACIÓN DE CONTACTO DIRECTO -->
+    <section>
+      <h2>INFORMACIÓN DE CONTACTO Y UBICACIÓN</h2>
+      <p><strong>Dirección:</strong> Av. Principal #100, Santo Domingo, República Dominicana</p>
+      <p><strong>Teléfono Directo:</strong> (809) 555-1234</p>
+      <p><strong>Correo Electrónico:</strong> info@uniquegym.com</p>
+      <p><strong>Horarios de Operación:</strong></p>
+      <ul>
+        <li>Lunes a Viernes: 5:00 AM - 10:00 PM</li>
+        <li>Sábados: 6:00 AM - 8:00 PM</li>
+        <li>Domingos: 8:00 AM - 2:00 PM</li>
+      </ul>
+    </section>
+
+    <!-- FORMULARIO DE REGISTRO E INSCRIPCIÓN -->
+    <section id="formulario">
+      <h2>FORMULARIO DE CONTACTO E INSCRIPCIÓN</h2>
+      <p>Completa el formulario para solicitar tu inscripción o enviar tus dudas.</p>
+
+      <form action="#" method="POST">
+
+        <!-- GRUPO 1: DATOS PERSONALES -->
+        <fieldset>
+          <legend>Datos Personales</legend>
+
+          <p>
+            <label for="nombre">Nombre Completo *</label><br>
+            <input 
+              type="text" 
+              id="nombre" 
+              name="nombre" 
+              placeholder="Ej. Juan Pérez" 
+              required 
+              minlength="2" 
+              maxlength="255"
+              pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+              title="Ingrese su nombre completo (solo letras y espacios)">
+          </p>
+
+          <p>
+            <label for="email">Correo Electrónico *</label><br>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="ejemplo@correo.com" 
+              required>
+          </p>
+
+          <p>
+            <label for="telefono">Teléfono *</label><br>
+            <input 
+              type="tel" 
+              id="telefono" 
+              name="telefono" 
+              placeholder="809-555-1234" 
+              required 
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              title="Formato de teléfono requerido: 809-555-1234">
+          </p>
+        </fieldset>
+
+        <!-- GRUPO 2: SELECCIÓN DE PLAN Y ASUNTO -->
+        <fieldset>
+          <legend>Detalles de la Membresía</legend>
+
+          <p>
+            <label for="asunto">Tipo de Membresía a Seleccionar *</label><br>
+            <select id="asunto" name="asunto" required>
+              <option value="" disabled selected>-- Elija un plan --</option>
+              <option value="basico">Plan Básico (RD$1,000 / mes)</option>
+              <option value="premium">Plan Premium (RD$1,500 / mes)</option>
+              <option value="elite">Plan Elite (RD$2,000 / mes)</option>
+              <option value="consulta">Consulta General / Pase de Prueba</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="mensaje">Mensaje o Comentarios Adicionales</label><br>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escriba aquí sus preguntas o especificaciones..."></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Enviar Inscripción</button>
+          <button type="reset">Limpiar Formulario</button>
+        </p>
+
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER GLOBAL (Corregido: usando div en lugar de section para evitar el warning de falta de encabezado) -->
+  <footer>
+    <div>
+      <h3>UNIQUE GYM</h3>
+      <p>Centro de acondicionamiento físico comprometido con la salud, el bienestar y el desarrollo de hábitos saludables.</p>
+    </div>
+    <div>
+      <p>&copy; 2026 Unique Gym. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

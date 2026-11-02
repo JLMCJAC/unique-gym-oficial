@@ -1,0 +1,37 @@
+/* ==========================================================================
+   UNIQUE GYM - DESIGN SYSTEM TOKENS (MÓDULO 3)
+   ========================================================================== */
+
+:root {
+  /* Paleta Cromática Institucional */
+  --color-primary-dark: #170B0B;
+  --color-accent-magenta: #9D0E4A;
+  --color-accent-magenta-hover: #7E0A3B;
+  --color-accent-blue: #22688D;
+  --color-accent-blue-hover: #1A516E;
+  --color-bg-mint: #E8F1EE;
+  --color-white: #FFFFFF;
+  --color-text-dark: #170B0B;
+  --color-border: #D1D5DB;
+
+  /* Tipografía y Escala Modular (Inter / Montserrat) */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-size-h1: 2rem;       /* 32px */
+  --font-size-h2: 1.5rem;     /* 24px */
+  --font-size-h3: 1.125rem;   /* 18px */
+  --font-size-body: 1rem;     /* 16px */
+  --font-size-small: 0.875rem;/* 14px */
+
+  /* Sistema de Espaciado (Escala cerrada de 8px) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Bordes y Sombras */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
