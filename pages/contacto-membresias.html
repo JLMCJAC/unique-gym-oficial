@@ -104,81 +104,107 @@
     </section>
 
     <!-- FORMULARIO DE REGISTRO E INSCRIPCIÓN -->
-    <section id="formulario">
-      <h2>FORMULARIO DE CONTACTO E INSCRIPCIÓN</h2>
-      <p>Completa el formulario para solicitar tu inscripción o enviar tus dudas.</p>
+<section id="formulario">
+  <h2>FORMULARIO DE CONTACTO E INSCRIPCIÓN</h2>
+  <p>Completa el formulario para solicitar tu inscripción o enviar tus dudas.</p>
 
-      <form action="#" method="POST">
+  <form action="#" method="POST">
 
-        <!-- GRUPO 1: DATOS PERSONALES -->
-        <fieldset>
-          <legend>Datos Personales</legend>
+    <!-- GRUPO 1: DATOS PERSONALES -->
+    <fieldset>
+      <legend>Datos Personales del Solicitante</legend>
 
-          <p>
-            <label for="nombre">Nombre Completo *</label><br>
-            <input 
-              type="text" 
-              id="nombre" 
-              name="nombre" 
-              placeholder="Ej. Juan Pérez" 
-              required 
-              minlength="2" 
-              maxlength="255"
-              pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
-              title="Ingrese su nombre completo (solo letras y espacios)">
-          </p>
+      <p>
+        <label for="nombre">Nombre Completo *</label><br>
+        <input 
+          type="text" 
+          id="nombre" 
+          name="nombre" 
+          placeholder="Ej. Juan Pérez" 
+          required 
+          minlength="2" 
+          maxlength="255"
+          pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+          title="Ingrese su nombre completo (solo letras y espacios)">
+      </p>
 
-          <p>
-            <label for="email">Correo Electrónico *</label><br>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              placeholder="ejemplo@correo.com" 
-              required>
-          </p>
+      <p>
+        <label for="email">Correo Electrónico *</label><br>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="ejemplo@correo.com" 
+          required 
+          aria-describedby="ayuda-email">
+        <span id="ayuda-email"><small>Recibirás la confirmación de tu membresía en esta dirección.</small></span>
+      </p>
 
-          <p>
-            <label for="telefono">Teléfono *</label><br>
-            <input 
-              type="tel" 
-              id="telefono" 
-              name="telefono" 
-              placeholder="809-555-1234" 
-              required 
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              title="Formato de teléfono requerido: 809-555-1234">
-          </p>
-        </fieldset>
+      <p>
+        <label for="telefono">Teléfono *</label><br>
+        <input 
+          type="tel" 
+          id="telefono" 
+          name="telefono" 
+          placeholder="809-555-1234" 
+          required 
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          title="Formato de teléfono requerido: 809-555-1234"
+          aria-describedby="ayuda-tel">
+        <span id="ayuda-tel"><small>Formato requerido: 3 dígitos, guion, 3 dígitos, guion, 4 dígitos.</small></span>
+      </p>
 
-        <!-- GRUPO 2: SELECCIÓN DE PLAN Y ASUNTO -->
-        <fieldset>
-          <legend>Detalles de la Membresía</legend>
+      <p>
+        <label for="fecha-inicio">Fecha Deseada de Inicio *</label><br>
+        <input 
+          type="date" 
+          id="fecha-inicio" 
+          name="fecha_inicio" 
+          required>
+      </p>
 
-          <p>
-            <label for="asunto">Tipo de Membresía a Seleccionar *</label><br>
-            <select id="asunto" name="asunto" required>
-              <option value="" disabled selected>-- Elija un plan --</option>
-              <option value="basico">Plan Básico (RD$1,000 / mes)</option>
-              <option value="premium">Plan Premium (RD$1,500 / mes)</option>
-              <option value="elite">Plan Elite (RD$2,000 / mes)</option>
-              <option value="consulta">Consulta General / Pase de Prueba</option>
-            </select>
-          </p>
+      <p>
+        <label for="edad">Edad del Solicitante *</label><br>
+        <input 
+          type="number" 
+          id="edad" 
+          name="edad" 
+          min="14" 
+          max="99" 
+          required 
+          aria-describedby="ayuda-edad">
+        <span id="ayuda-edad"><small>Edad mínima para inscripción: 14 años.</small></span>
+      </p>
+    </fieldset>
 
-          <p>
-            <label for="mensaje">Mensaje o Comentarios Adicionales</label><br>
-            <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escriba aquí sus preguntas o especificaciones..."></textarea>
-          </p>
-        </fieldset>
+    <!-- GRUPO 2: SELECCIÓN DE PLAN -->
+    <fieldset>
+      <legend>Detalles de la Membresía</legend>
 
-        <p>
-          <button type="submit">Enviar Inscripción</button>
-          <button type="reset">Limpiar Formulario</button>
-        </p>
+      <p>
+        <label for="asunto">Tipo de Membresía a Seleccionar *</label><br>
+        <select id="asunto" name="asunto" required>
+          <option value="" disabled selected>-- Elija un plan --</option>
+          <option value="basico">Plan Básico (RD$1,000 / mes)</option>
+          <option value="premium">Plan Premium (RD$1,500 / mes)</option>
+          <option value="elite">Plan Elite (RD$2,000 / mes)</option>
+          <option value="consulta">Consulta General / Pase de Prueba</option>
+        </select>
+      </p>
 
-      </form>
-    </section>
+      <p>
+        <label for="mensaje">Comentarios Adicionales</label><br>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escriba aquí sus preguntas..."></textarea>
+      </p>
+    </fieldset>
+
+    <p>
+      <button type="submit">Enviar Inscripción</button>
+      <button type="reset">Limpiar Formulario</button>
+    </p>
+
+  </form>
+</section>	
   </main>
 
   <!-- FOOTER GLOBAL (Corregido: usando div en lugar de section para evitar el warning de falta de encabezado) -->
@@ -187,6 +213,24 @@
       <h3>UNIQUE GYM</h3>
       <p>Centro de acondicionamiento físico comprometido con la salud, el bienestar y el desarrollo de hábitos saludables.</p>
     </div>
+
+    <div>
+      <h3>CONTACTO</h3>
+      <p>Av. Principal #100, Santo Domingo, República Dominicana</p>
+      <p>Teléfono: (809) 555-1234</p>
+      <p>Correo: info@uniquegym.com</p>
+    </div>
+
+    <div>
+      <h3>SÍGUENOS</h3>
+      <ul>
+		<li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+		<li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+		<li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+		<li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+	  </ul>
+    </div>
+
     <div>
       <p>&copy; 2026 Unique Gym. Todos los derechos reservados.</p>
     </div>
